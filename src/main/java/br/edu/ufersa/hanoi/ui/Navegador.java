@@ -42,7 +42,7 @@ public class Navegador {
     // ---- Esqueletos: substitua pelo método real conforme cada tela ficar pronta ----
 
     public void mostrarNiveis() {
-        trocarTela(telaProvisoria("Escolha de nível"));
+        trocarTela(new TelaNiveis(this));
     }
 
     public void mostrarJogo(int nivel) {

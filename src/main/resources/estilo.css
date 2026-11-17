@@ -25,3 +25,18 @@
 .botao-menu:hover {
     -fx-background-color: #6aa9ff;
 }
+
+.botao-nivel {
+    -fx-min-width: 420px;
+}
+
+.botao-voltar {
+    -fx-font-size: 16px;
+    -fx-background-color: transparent;
+    -fx-text-fill: #9fb3c8;
+    -fx-cursor: hand;
+}
+
+.botao-voltar:hover {
+    -fx-text-fill: white;
+}
