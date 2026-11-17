@@ -90,24 +90,4 @@ public class RankingArquivo {
             return null;
         }
     }
-
-    public static void main(String[] args) throws IOException {
-        RankingArquivo arquivo = new RankingArquivo("ranking-teste.csv");
-
-        // 1. Arquivo inexistente: ranking vazio
-        System.out.println(arquivo.carregar().tamanho(3)); // 0
-
-        // 2. Salvar e recarregar
-        Ranking r = new Ranking();
-        r.adicionar(new RegistroRanking("João;Silva", 3, 10, 5000)); // ';' vira espaço
-        r.adicionar(new RegistroRanking("Bia", 3, 8, 9000));
-        r.adicionar(new RegistroRanking("Edu", 4, 20, 8000));
-        arquivo.salvar(r);
-
-        Ranking lido = arquivo.carregar();
-        System.out.println(lido.tamanho(3) + " " + lido.tamanho(4));            // 2 1
-        System.out.println(lido.get(3, 0).getNome());                           // Bia
-        System.out.println(lido.get(3, 1).getNome());                           // João Silva
-        System.out.println(lido.get(3, 1).getTempoFormatado());                 // 00:05
-    }
 }
