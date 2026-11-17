@@ -1,0 +1,27 @@
+.raiz {
+    -fx-background-color: #1e2a38;
+}
+
+.titulo {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f5f5f5;
+}
+
+.subtitulo {
+    -fx-font-size: 24px;
+    -fx-text-fill: #f5f5f5;
+}
+
+.botao-menu {
+    -fx-min-width: 240px;
+    -fx-font-size: 20px;
+    -fx-background-color: #3d8bfd;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.botao-menu:hover {
+    -fx-background-color: #6aa9ff;
+}
