@@ -50,11 +50,11 @@ public class Navegador {
     }
 
     public void mostrarVitoria(Jogo jogo) {
-        trocarTela(telaProvisoria("Vitória"));
+        trocarTela(new TelaVitoria(this, jogo));
     }
 
     public void mostrarRanking() {
-        trocarTela(telaProvisoria("Ranking"));
+        trocarTela(new TelaRanking(this));
     }
 
     // ---- Infraestrutura ----

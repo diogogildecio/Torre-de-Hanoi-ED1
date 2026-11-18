@@ -90,3 +90,11 @@
     -fx-background-color: #4a5560;
     -fx-text-fill: #9aa4ae;
 }
+.estrelas {
+    -fx-font-size: 56px;
+    -fx-text-fill: #f7c548;
+}
+
+.campo-nome {
+    -fx-font-size: 16px;
+}
