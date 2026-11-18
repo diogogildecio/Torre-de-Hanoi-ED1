@@ -46,7 +46,7 @@ public class Navegador {
     }
 
     public void mostrarJogo(int nivel) {
-        trocarTela(telaProvisoria("Jogo (nível " + nivel + ")"));
+        trocarTela(new TelaJogo(this, nivel));
     }
 
     public void mostrarVitoria(Jogo jogo) {
