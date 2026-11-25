@@ -57,6 +57,8 @@ public class Navegador {
         trocarTela(new TelaRanking(this));
     }
 
+    public void mostrarInstrucoes() { trocarTela(new TelaInstrucoes(this)); }
+
     // ---- Infraestrutura ----
 
     // Único lugar que define tamanho da janela e CSS

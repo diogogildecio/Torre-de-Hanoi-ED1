@@ -25,7 +25,10 @@ public class TelaMenu extends VBox {
         Button sair = criarBotao("Sair");
         sair.setOnAction(e -> Platform.exit());
 
-        getChildren().addAll(titulo, jogar, ranking, sair);
+        Button instrucoes = criarBotao("Instruções");
+        instrucoes.setOnAction(e -> navegador.mostrarInstrucoes());
+
+        getChildren().addAll(titulo, jogar, instrucoes, ranking, sair);
     }
 
     private Button criarBotao(String texto) {
