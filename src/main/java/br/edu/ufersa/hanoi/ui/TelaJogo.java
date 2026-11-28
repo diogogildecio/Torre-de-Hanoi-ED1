@@ -21,7 +21,7 @@ import javafx.util.Duration;
 public class TelaJogo extends BorderPane {
 
     // Cores por TAMANHO da argola (índice = tamanho - 1): vermelho ao violeta
-    private static final String[] CORES = {
+    static final String[] CORES = {
             "#e63946", "#f4811f", "#f7c548", "#43b86a", "#3d8bfd", "#5b5fd6", "#9b5de5"
     };
 

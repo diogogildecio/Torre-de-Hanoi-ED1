@@ -1,98 +1,131 @@
 .raiz {
-    -fx-background-color: #1e2a38;
+    -fx-background-color: linear-gradient(to bottom right, -cor-fundo, -cor-fundo-escuro);
 }
 
 .titulo {
     -fx-font-size: 48px;
     -fx-font-weight: bold;
-    -fx-text-fill: #f5f5f5;
+    -fx-text-fill: -cor-texto;
 }
 
 .subtitulo {
     -fx-font-size: 24px;
-    -fx-text-fill: #f5f5f5;
+    -fx-text-fill: -cor-texto;
+}
+
+.subtitulo-menu {
+    -fx-font-size: 16px;
+    -fx-text-fill: -cor-texto-suave;
 }
 
 .botao-menu {
-    -fx-min-width: 240px;
+    -fx-min-width: 300px;
+    -fx-pref-width: 300px;
     -fx-font-size: 20px;
-    -fx-background-color: #3d8bfd;
+    -fx-background-color: -cor-destaque;
     -fx-text-fill: white;
     -fx-background-radius: 8;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 8, 0.2, 0, 3);
 }
 
 .botao-menu:hover {
-    -fx-background-color: #6aa9ff;
+    -fx-background-color: -cor-destaque-claro;
 }
 
-.botao-nivel {
-    -fx-min-width: 420px;
+.botao-menu:pressed {
+    -fx-background-color: derive(-cor-destaque, -15%);
+    -fx-translate-y: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 3, 0.2, 0, 1);
 }
 
+/* "Jogar": mesmo tamanho dos outros, destacado só pela cor */
+.botao-principal {
+    -fx-background-color: -cor-sucesso;
+    -fx-font-weight: bold;
+}
+
+.botao-principal:hover {
+    -fx-background-color: -cor-sucesso-claro;
+}
+
+.botao-principal:pressed {
+    -fx-background-color: derive(-cor-sucesso, -15%);
+}
+
+/* "Sair": mesmo formato, em cinza-azulado escuro (sem contorno) */
+.botao-sair {
+    -fx-background-color: #2f3b4a;
+    -fx-text-fill: -cor-texto-suave;
+}
+
+.botao-sair:hover {
+    -fx-background-color: #3d4b5d;
+    -fx-text-fill: white;
+}
+
+.botao-sair:pressed {
+    -fx-background-color: derive(#2f3b4a, -15%);
+}
 .botao-voltar {
     -fx-font-size: 16px;
     -fx-background-color: transparent;
-    -fx-text-fill: #9fb3c8;
+    -fx-text-fill: -cor-texto-suave;
     -fx-cursor: hand;
 }
 
 .botao-voltar:hover {
     -fx-text-fill: white;
 }
+
 .info-jogo {
     -fx-font-size: 22px;
-    -fx-text-fill: #f5f5f5;
+    -fx-text-fill: -cor-texto;
 }
 
 .mensagem {
     -fx-font-size: 18px;
-    -fx-text-fill: #ffb4a2;
-}
-
-.vareta {
-    -fx-background-radius: 10;
-}
-
-.vareta:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.06);
-    -fx-cursor: hand;
-}
-
-.vareta-selecionada {
-    -fx-background-color: rgba(61, 139, 253, 0.18);
+    -fx-text-fill: -cor-aviso;
 }
 
 .haste {
-    -fx-fill: #c9d1d9;
+    -fx-fill: -cor-haste;
     -fx-arc-width: 6;
     -fx-arc-height: 6;
 }
 
 .base-vareta {
-    -fx-fill: #8b949e;
+    -fx-fill: -cor-base;
 }
 
 .botao-acao {
     -fx-min-width: 140px;
     -fx-font-size: 16px;
-    -fx-background-color: #3d8bfd;
+    -fx-background-color: -cor-destaque;
     -fx-text-fill: white;
     -fx-background-radius: 8;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 6, 0.2, 0, 2);
 }
 
 .botao-acao:hover {
-    -fx-background-color: #6aa9ff;
+    -fx-background-color: -cor-destaque-claro;
+}
+
+.botao-acao:pressed {
+    -fx-background-color: derive(-cor-destaque, -15%);
+    -fx-translate-y: 1;
 }
 
 .botao-acao:disabled {
-    -fx-background-color: #4a5560;
+    -fx-background-color: -cor-desabilitado;
     -fx-text-fill: #9aa4ae;
+    -fx-effect: null;
 }
+
 .estrelas {
     -fx-font-size: 56px;
-    -fx-text-fill: #f7c548;
+    -fx-text-fill: -cor-estrela;
 }
 
 .campo-nome {
@@ -118,4 +151,20 @@
 .instrucao-texto {
     -fx-font-size: 16px;
     -fx-text-fill: #f5f5f5;
+}
+
+.root {
+    -cor-fundo: #2b4162;
+    -cor-fundo-escuro: #0f1722;
+    -cor-destaque: #3d8bfd;
+    -cor-destaque-claro: #6aa9ff;
+    -cor-sucesso: #43b86a;
+    -cor-sucesso-claro: #5fd488;
+    -cor-texto: #f5f5f5;
+    -cor-texto-suave: #9fb3c8;
+    -cor-aviso: #ffb4a2;
+    -cor-estrela: #f7c548;
+    -cor-desabilitado: #4a5560;
+    -cor-haste: #c9d1d9;
+    -cor-base: #8b949e;
 }
